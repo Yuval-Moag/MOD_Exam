@@ -117,3 +117,6 @@ local.properties
 *~
 .DS_Store
 Thumbs.db
+elasticsearch-test.js
+ServerNet/mssql-local.spf
+server2-elasticsearch/elasticsearch-test.js
