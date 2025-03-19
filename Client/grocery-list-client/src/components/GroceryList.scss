@@ -1,0 +1,104 @@
+.grocery-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+
+  .category-selector {
+    margin-bottom: 20px;
+
+    select {
+      margin-right: 10px;
+      padding: 8px;
+      font-size: 16px;
+    }
+  }
+
+  .products-list {
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+
+    .product-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+  }
+
+  .shopping-list {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+
+    &-category {
+      margin-bottom: 20px;
+
+      h3 {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &-items {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid #f5f5f5;
+    }
+  }
+
+  .quantity-control {
+    display: flex;
+    align-items: center;
+
+    button {
+      width: 30px;
+      height: 30px;
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+      cursor: pointer;
+    }
+
+    input {
+      width: 40px;
+      height: 28px;
+      text-align: center;
+      margin: 0 5px;
+    }
+  }
+
+  .add-to-cart-btn, .confirm-order-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+  
+  .confirm-order-btn {
+    display: block;
+    margin: 20px auto 0;
+    width: 200px;
+    background-color: #1976d2;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+  }
+}

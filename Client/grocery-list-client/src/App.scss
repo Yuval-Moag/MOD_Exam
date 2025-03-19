@@ -1,0 +1,16 @@
+body {
+    font-family: 'Arial', sans-serif;
+    direction: rtl;
+    text-align: right;
+  }
+  
+  .App {
+    text-align: center;
+  
+    &-header {
+      background-color: #282c34;
+      padding: 20px;
+      color: white;
+      margin-bottom: 20px;
+    }
+  }
