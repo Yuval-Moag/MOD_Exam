@@ -1,0 +1,89 @@
+{
+  "mappings": {
+    "properties": {
+      "id": { 
+        "type": "keyword" 
+      },
+      "title": { 
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        },
+        "analyzer": "hebrew_analyzer"
+      },
+      "items": {
+        "type": "nested",
+        "properties": {
+          "id": { 
+            "type": "keyword" 
+          },
+          "name": { 
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            },
+            "analyzer": "hebrew_analyzer"
+          },
+          "quantity": { 
+            "type": "integer" 
+          },
+          "completed": { 
+            "type": "boolean" 
+          }
+        }
+      },
+      "user": {
+        "properties": {
+          "id": { 
+            "type": "keyword" 
+          },
+          "username": { 
+            "type": "keyword" 
+          },
+          "email": { 
+            "type": "keyword" 
+          }
+        }
+      },
+      "createdAt": { 
+        "type": "date" 
+      },
+      "updatedAt": { 
+        "type": "date" 
+      }
+    }
+  },
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "hebrew_analyzer": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "hebrew_stop",
+            "hebrew_stemmer"
+          ]
+        }
+      },
+      "filter": {
+        "hebrew_stop": {
+          "type": "stop",
+          "stopwords": "_hebrew_"
+        },
+        "hebrew_stemmer": {
+          "type": "stemmer",
+          "language": "hebrew"
+        }
+      }
+    },
+    "number_of_shards": 1,
+    "number_of_replicas": 0
+  }
+}
